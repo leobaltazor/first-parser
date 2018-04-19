@@ -8,6 +8,7 @@
   "license": "WTFPL",
   "dependencies": {
     "cheerio": "^0.20.0",
+    "json2xml": "^0.1.3",
     "needle": "^1.0.0",
     "tress": "^1.0.0"
   }

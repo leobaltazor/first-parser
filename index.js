@@ -31,12 +31,12 @@ var q = tress(function(url, callback){
 					page.push("https:" + $('a',this).attr('href'));
 					q.push("https:" + $('a',this).attr('href'));
 				}) 
-console.log(page);
-console.log(q);
+// console.log(page);
+// console.log(q);
 con++
 console.log(con);
 if (con % 10 == 0) {
-	fs.writeFileSync(`./data${con}.json`, JSON.stringify(cards, null, 4));
+	fs.writeFileSync(`./data/data${con}.json`, JSON.stringify(cards, null, 4));
 }
 
         callback();
@@ -44,7 +44,7 @@ if (con % 10 == 0) {
 }, 10);
 
 q.drain = function(){
-    fs.writeFileSync(`./data${con}.json`, JSON.stringify(cards, null, 4));
+    fs.writeFileSync(`./data.json`, JSON.stringify(cards, null, 4));
 }
 
 q.push(URL);
